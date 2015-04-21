@@ -1,0 +1,23 @@
+
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: root
+  socket: /var/run/mysqld/mysqld.sock
+
+development:
+  <<: *default
+  database: dine-media_com_development
+
+
+test:
+  <<: *default
+  database: dine-media_com_test
+
+production:
+  <<: *default
+  database: dine-media_com_production
+  username: dine-media_com
+  password: <%= ENV['DINE-MEDIA_COM_DATABASE_PASSWORD'] %>
