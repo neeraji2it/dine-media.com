@@ -1,7 +1,7 @@
 # config valid only for Capistrano 3.1
 lock '3.2.1'
 
-set :application, 'dine-media'
+set :application, 'dine-media.com'
 set :repo_url, 'git@github.com:neeraji2it/dine-media.com.git'
 
 # Default branch is :master
@@ -18,13 +18,13 @@ set :branch, 'master'
 # set :format, :pretty
 
 # Default value for :log_level is :debug
-set :log_level, :info
+# set :log_level, :debug
 
 # Default value for :pty is false
 # set :pty, true
 
 # Default value for :linked_files is []
-set :linked_files, %w{config/database.yml}
+set :linked_files, %w{config/database.yml config/secrets.yml}
 
 # Default value for linked_dirs is []
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
